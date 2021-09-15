@@ -1,6 +1,7 @@
 package revature.gui;
 
 import javafx.scene.effect.ColorInputBuilder;
+import org.omg.PortableInterceptor.ACTIVE;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class SimonGui implements MouseListener {
+public class SimonGui implements ActionListener {
 
     public int highScore;
 
@@ -34,90 +35,53 @@ public class SimonGui implements MouseListener {
 
         start.setBounds(0,0,100,30);
 
-        blue.setBounds(300,100,200,200);
-        blue.setBackground(Color.BLUE);
-
-        green.setBounds(100,100,200,200);
-        green.setBackground(Color.GREEN);
-
-        red.setBounds(300,300,200,200);
-        red.setBackground(Color.RED);
-
-        yellow.setBounds(100,300,200,200);
-        yellow.setBackground(Color.YELLOW);
+//        blue.setBounds(300,100,200,200);
+//        blue.setBackground(Color.BLUE);
+//
+//        green.setBounds(100,100,200,200);
+//        green.setBackground(Color.GREEN);
+//
+//        red.setBounds(300,300,200,200);
+//        red.setBackground(Color.RED);
+//
+//        yellow.setBounds(100,300,200,200);
+//        yellow.setBackground(Color.YELLOW);
 
         frame.setSize(WIDTH, HEIGHT);
         frame.setLayout(null);
         frame.add(start);
-        frame.add(blue);
-        frame.add(red);
-        frame.add(green);
-        frame.add(yellow);
-        frame.add(label);
+//        frame.add(blue);
+//        frame.add(red);
+//        frame.add(green);
+//        frame.add(yellow);
+//        frame.add(label);
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        
-    }
+
+
 
     @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
+    public void actionPerformed(ActionEvent e) {
 
     }
 
-    @Override
-    public void mouseEntered(MouseEvent e) {
+    public void paint(Graphics2D g) {
+        g.setColor(Color.GRAY);
+        g.fillRect(0,0, WIDTH, HEIGHT);
 
-    }
+        g.setColor(Color.GREEN);
+        g.fillRect(0,0, WIDTH / 2, HEIGHT / 2);
+        g.setColor(Color.RED);
+        g.fillRect(WIDTH / 2,0, WIDTH / 2, HEIGHT / 2);
+        g.setColor(Color.YELLOW);
+        g.fillRect(0,HEIGHT / 2, WIDTH / 2, HEIGHT / 2);
+        g.setColor(Color.BLUE);
+        g.fillRect(WIDTH / 2,HEIGHT / 2, WIDTH / 2, HEIGHT / 2);
 
-    @Override
-    public void mouseExited(MouseEvent e) {
 
-    }
 
-    public void run() {
-//        Scanner user = new Scanner(System.in);
-//        List<Integer> pattern = new ArrayList();
-//        boolean loss = false;
-//        Random rand = new Random();
-//        int input = 0;
-//
-//        System.out.println("Simon says with a number between 1-4");
-//
-//        while (!loss) {
-//            pattern.add(rand.nextInt((4-1) + 1) + 1);
-//            System.out.println(pattern);
-//            for (int i : pattern) {
-//                if (loss) {
-//                    System.out.println("1st loss");
-//                    break;
-//                }
-//
-//                if (user.hasNextInt()) {
-//                    input = user.nextInt();
-//                }
-//                else {
-//                    loss = true;
-//                }
-//
-//                if (input != i) {
-//                    loss = true;
-//                    System.out.println("2nd loss" + input + " " + i);
-//                    break;
-//                }
-//            }
-//            if(loss) {
-//                System.out.println("You lose! Your record is " + pattern.size());
-//            }
-//        }
     }
 }

@@ -1,7 +1,6 @@
 package revature;
 
 import revature.gui.ColorFlash;
-import revature.gui.SimonGui;
 import revature.gui.SimonRender;
 
 import javax.swing.*;
@@ -51,6 +50,8 @@ public class SimonSays implements ActionListener, MouseListener{
     }
 
     public static void main(String[] args) {
+
+
 
         simon = new SimonSays();
 
@@ -116,7 +117,6 @@ public class SimonSays implements ActionListener, MouseListener{
     public void mousePressed(MouseEvent e) {
         int x = e.getX();
         int y = e.getY();
-        colorFlash = 1;
         System.out.println(x + " " + y);
         if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2) {
             colorFlash = ColorFlash.GREEN;

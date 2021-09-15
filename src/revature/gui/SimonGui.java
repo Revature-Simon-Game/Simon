@@ -1,8 +1,5 @@
 package revature.gui;
 
-import javafx.scene.effect.ColorInputBuilder;
-import org.omg.PortableInterceptor.ACTIVE;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,22 +9,21 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 public class SimonGui implements ActionListener {
 
-    public int highScore;
+    public int highScore = 0;
 
     public final int HEIGHT = 600;
     public final int WIDTH = 600;
 
     JFrame frame = new JFrame();
 
-    JLabel label = new JLabel("High Score: " + highScore);
-    JButton start = new JButton("Start");
-    JButton blue = new JButton("blue");
-    JButton green = new JButton("green");
-    JButton red = new JButton("red");
+    JLabel  label  = new JLabel("High Score: " + highScore);
+    JButton start  = new JButton("Start");
+    JButton red    = new JButton("red");
+    JButton green  = new JButton("green");
+    JButton blue   = new JButton("blue");
     JButton yellow = new JButton("yellow");
 
     public SimonGui() {
@@ -67,6 +63,7 @@ public class SimonGui implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
     }
+    
 
     public void paint(Graphics2D g) {
         g.setColor(Color.GRAY);

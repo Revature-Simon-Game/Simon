@@ -1,5 +1,6 @@
 package revature;
 
+import revature.gui.ColorFlash;
 import revature.gui.SimonGui;
 import revature.gui.SimonRender;
 
@@ -16,7 +17,7 @@ public class SimonSays implements ActionListener, MouseListener{
 
     public int highScore;
 
-    int colorFlash = 0;
+    ColorFlash colorFlash = ColorFlash.NONE;
 
     public final int HEIGHT = 600;
     public final int WIDTH = 600;
@@ -61,34 +62,41 @@ public class SimonSays implements ActionListener, MouseListener{
     public void actionPerformed(ActionEvent e) {
         render.repaint();
     }
+    
+    public Color darken(Color color) {
+        return color.darker().darker().darker();
+    }
 
     public void paint(Graphics2D g) {
         g.setColor(Color.GRAY);
         g.fillRect(0,0,WIDTH,HEIGHT);
 
-        if (colorFlash == 1)
+        if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
-        else
-            g.setColor(Color.GREEN.darker());
+        } else {
+            g.setColor(darken(Color.GREEN));
+        }
 
         g.fillArc(0,0,WIDTH, HEIGHT, 90, 90);
 
-        if (colorFlash == 2)
+        if (colorFlash == ColorFlash.RED) {
             g.setColor(Color.RED);
-        else
-            g.setColor(Color.RED.darker());
+        } else {
+            g.setColor(darken(Color.RED));
+        }
         g.fillArc(0, 0, WIDTH, HEIGHT, 90, -90);
 
-        if (colorFlash == 3)
+        if (colorFlash == ColorFlash.BLUE) {
             g.setColor(Color.BLUE);
-        else
-            g.setColor(Color.BLUE.darker());
+        } else
+            g.setColor(darken(Color.BLUE));
         g.fillArc(0, 0, WIDTH, HEIGHT, 0, -90);
 
-        if (colorFlash == 4)
+        if (colorFlash == ColorFlash.YELLOW) {
             g.setColor(Color.YELLOW);
-        else
-            g.setColor(Color.YELLOW.darker());
+        } else {
+            g.setColor(darken(Color.YELLOW));
+        }
         g.fillArc(0, 0, WIDTH, HEIGHT, 180, 90);
 
         g.setColor(Color.BLACK);
@@ -110,13 +118,13 @@ public class SimonSays implements ActionListener, MouseListener{
         int y = e.getY();
         System.out.println(x + " " + y);
         if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2) {
-            colorFlash = 1;
+            colorFlash = ColorFlash.GREEN;
         } else if(x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2) {
-            colorFlash = 2;
+            colorFlash = ColorFlash.RED;
         } else if(x > 0 && x < WIDTH / 2 && y > HEIGHT / 2 && y < HEIGHT) {
-            colorFlash = 4;
+            colorFlash = ColorFlash.YELLOW;
         } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 && y < HEIGHT) {
-            colorFlash = 3;
+            colorFlash = ColorFlash.BLUE;
         }
     }
 

@@ -116,6 +116,7 @@ public class SimonSays implements ActionListener, MouseListener{
     public void mousePressed(MouseEvent e) {
         int x = e.getX();
         int y = e.getY();
+        colorFlash = 1;
         System.out.println(x + " " + y);
         if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2) {
             colorFlash = ColorFlash.GREEN;

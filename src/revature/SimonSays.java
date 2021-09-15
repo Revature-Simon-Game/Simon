@@ -8,7 +8,7 @@ public class SimonSays {
 
         SimonGui game = new SimonGui();
 
-        game.run();
+        //game.run();
 
     }
 }

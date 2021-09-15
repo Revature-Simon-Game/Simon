@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/gui/SimonGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simonSays/bin/simonSays/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simonSays/src/simonSays/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/revature/gui/SimonGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/gui/SimonGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

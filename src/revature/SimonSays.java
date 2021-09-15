@@ -1,4 +1,4 @@
-package net.revature;
+package revature;
 
 import java.util.ArrayList;
 import java.util.List;

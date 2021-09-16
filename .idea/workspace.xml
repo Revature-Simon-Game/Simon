@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a5136a8-6e19-433d-8a2f-35b2930f0df4" name="Default Changelist" comment="Fixed brackets, improved contrast, changed int field to enum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/revature/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/GamePlay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -63,9 +63,9 @@ public class Sfx {
 			green.open(ai);
 			ai = AudioSystem.getAudioInputStream(new File("sounds/btn3.wav"));
 			blue.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("/sounds/btn4.wav"));
+			ai = AudioSystem.getAudioInputStream(new File("sounds/btn4.wav"));
 			yellow.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("/sounds/loss.wav"));
+			ai = AudioSystem.getAudioInputStream(new File("sounds/loss.wav"));
 			loss.open(ai);
 		} catch (FileNotFoundException e) {
 			System.out.println("Could not load sound files.");

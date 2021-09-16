@@ -56,7 +56,6 @@ public class GamePlay {
 			else {
 				patternPlace = 0;
 				pattern.clear();
-				pattern.add(rand.nextInt((4-1) + 1) + 1);
 				return false;
 			}
 		}

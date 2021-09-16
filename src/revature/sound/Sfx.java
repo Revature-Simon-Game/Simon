@@ -17,31 +17,6 @@ public class Sfx {
 	 * || |_
 	 */
 	
-	private static void init() {
-		try {
-			red = AudioSystem.getClip();
-			green = AudioSystem.getClip();
-			blue = AudioSystem.getClip();
-			yellow = AudioSystem.getClip();
-			loss = AudioSystem.getClip();
-			
-			AudioInputStream ai;
-						
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn1.wav"));
-			red.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn2.wav"));
-			green.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn3.wav"));
-			blue.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn4.wav"));
-			yellow.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/loss.wav"));
-			loss.open(ai);
-		} catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
-			e.printStackTrace();
-		}
-	}
-	
 	public static void play(SoundTypes sound)  {
 		
 		if (!initialized) {
@@ -69,5 +44,30 @@ public class Sfx {
 		}
 		
 		return;
+	}
+	
+	private static void init() {
+		try {
+			red = AudioSystem.getClip();
+			green = AudioSystem.getClip();
+			blue = AudioSystem.getClip();
+			yellow = AudioSystem.getClip();
+			loss = AudioSystem.getClip();
+			
+			AudioInputStream ai;
+			
+			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn1.wav"));
+			red.open(ai);
+			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn2.wav"));
+			green.open(ai);
+			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn3.wav"));
+			blue.open(ai);
+			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn4.wav"));
+			yellow.open(ai);
+			ai = AudioSystem.getAudioInputStream(new File("../../sounds/loss.wav"));
+			loss.open(ai);
+		} catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+			e.printStackTrace();
+		}
 	}
 }

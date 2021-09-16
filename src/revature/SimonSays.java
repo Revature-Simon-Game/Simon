@@ -150,17 +150,17 @@ public class SimonSays implements ActionListener, MouseListener{
 					colorFlash = ColorFlash.GREEN;
 					timer.start();
 				}
-				
+
 				if(i == 2) {
 					colorFlash = ColorFlash.RED;
 					timer.start();
 				}
-				
+
 				if(i == 3) {
 					colorFlash = ColorFlash.BLUE;
 					timer.start();
 				}
-				
+
 				if(i == 4) {
 					colorFlash = ColorFlash.YELLOW;
 					timer.start();

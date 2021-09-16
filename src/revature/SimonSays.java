@@ -2,7 +2,8 @@ package revature;
 
 import revature.gui.ColorFlash;
 import revature.gui.SimonRender;
-
+import revature.sound.Sfx;
+import revature.sound.SoundTypes;
 import revature.GamePlay;
 
 import javax.swing.*;
@@ -18,6 +19,8 @@ import java.util.concurrent.TimeUnit;
 public class SimonSays implements ActionListener, MouseListener{
 
     public static SimonSays simon;
+    
+    public Sfx sfx = new Sfx();
     
     public GamePlay gamePlay = new GamePlay();
 
@@ -112,6 +115,7 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
             if (pattern == false) {
+            	sfx.play(SoundTypes.RED);
 	            System.out.println(gamePlay.patternCheck(colorFlash));
 	            colorFlash = ColorFlash.NONE;
 				System.out.println(gamePlay.pattern);

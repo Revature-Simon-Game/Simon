@@ -3,6 +3,8 @@ package revature;
 import revature.gui.ColorFlash;
 import revature.gui.SimonRender;
 
+import revature.GamePlay;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -71,9 +73,10 @@ public class SimonSays implements ActionListener, MouseListener{
     }
 
     public void paint(Graphics2D g) {
-    	
         g.setColor(Color.GRAY);
         g.fillRect(0,0,WIDTH,HEIGHT);
+        GamePlay gamePlay = new GamePlay();
+        gamePlay.increment();
 
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);

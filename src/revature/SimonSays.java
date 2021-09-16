@@ -23,7 +23,7 @@ public class SimonSays implements ActionListener, MouseListener{
 
     public int highScore;
     public boolean pattern = false;
-    public int patternCount = 1;
+    public int patternCount = 0;
 
     ColorFlash colorFlash = ColorFlash.NONE;
 
@@ -211,7 +211,6 @@ public class SimonSays implements ActionListener, MouseListener{
         System.out.println(x + " " + y);
 	        if (x > 200 && x < 400 && y > 230 && y < 420) {
 	        	gamePlay.pattern.clear();
-				gamePlay.increment();
 				gamePlay.increment();
 				pattern = true;
 				System.out.println(gamePlay.pattern);

@@ -3,6 +3,8 @@ package revature;
 import revature.gui.ColorFlash;
 import revature.gui.SimonGui;
 import revature.gui.SimonRender;
+import revature.sound.Sfx;
+import revature.sound.SoundTypes;
 
 import javax.swing.*;
 import java.awt.*;
@@ -87,6 +89,7 @@ public class SimonSays implements ActionListener, MouseListener{
         g.fillArc(0,0,WIDTH, HEIGHT, 90, 90);
 
         if (colorFlash == ColorFlash.RED) {
+            Sfx.play(SoundTypes.RED);
             g.setColor(Color.RED);
             timer.start();
             colorFlash = ColorFlash.NONE;

@@ -2,6 +2,7 @@ package revature.sound;
 
 import javax.sound.sampled.*;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Sfx {
@@ -56,17 +57,23 @@ public class Sfx {
 			
 			AudioInputStream ai;
 			
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn1.wav"));
+			ai = AudioSystem.getAudioInputStream(new File("sounds/btn1.wav"));
 			red.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn2.wav"));
+			ai = AudioSystem.getAudioInputStream(new File("sounds/btn2.wav"));
 			green.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn3.wav"));
+			ai = AudioSystem.getAudioInputStream(new File("sounds/btn3.wav"));
 			blue.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/btn4.wav"));
+			ai = AudioSystem.getAudioInputStream(new File("/sounds/btn4.wav"));
 			yellow.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("../../sounds/loss.wav"));
+			ai = AudioSystem.getAudioInputStream(new File("/sounds/loss.wav"));
 			loss.open(ai);
+		} catch (FileNotFoundException e) {
+			System.out.println("Could not load sound files.");
+			System.out.print("Path to directory: " + (new File("sounds/btn1.wav")).toPath().toAbsolutePath().toString());
+			
+			System.exit(1);
 		} catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+			System.out.println();
 			e.printStackTrace();
 		}
 	}

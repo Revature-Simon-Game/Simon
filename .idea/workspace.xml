@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="First draft. Code is untested.">
+    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="Reorganized Sfx.java a little">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/revature/sound/Sfx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/sound/Sfx.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +114,28 @@
       <option name="project" value="LOCAL" />
       <updated>1631823481500</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed bug in initialization">
+      <created>1631823672093</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631823672093</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed bug in initialization">
+      <created>1631823686577</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631823686577</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reorganized Sfx.java a little">
+      <created>1631824192589</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631824192589</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +167,20 @@
     <MESSAGE value="New branch" />
     <MESSAGE value="Added sounds" />
     <MESSAGE value="First draft. Code is untested." />
-    <option name="LAST_COMMIT_MESSAGE" value="First draft. Code is untested." />
+    <MESSAGE value="Fixed bug in initialization" />
+    <MESSAGE value="Reorganized Sfx.java a little" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorganized Sfx.java a little" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/revature/SimonSays.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Simon$SimonSays__1_.ic" NAME="SimonSays (1) Coverage Results" MODIFIED="1631801331242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

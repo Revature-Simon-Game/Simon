@@ -9,6 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class SimonSays implements ActionListener, MouseListener{
 
@@ -22,6 +25,7 @@ public class SimonSays implements ActionListener, MouseListener{
     public final int WIDTH = 600;
 
     public JFrame frame = new JFrame();
+    Timer timer = new Timer(100,this);
 
     public JLabel label = new JLabel("High Score: " + highScore);
     public JButton start = new JButton("Start");
@@ -29,10 +33,8 @@ public class SimonSays implements ActionListener, MouseListener{
     public SimonRender render;
 
     public SimonSays() {
-        Timer timer = new Timer(20,this);
-
         render = new SimonRender();
-
+        
         frame.setSize(WIDTH + 6, HEIGHT + 29);
         frame.setVisible(true);
         frame.addMouseListener(this);
@@ -69,11 +71,14 @@ public class SimonSays implements ActionListener, MouseListener{
     }
 
     public void paint(Graphics2D g) {
+    	
         g.setColor(Color.GRAY);
         g.fillRect(0,0,WIDTH,HEIGHT);
 
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
+            timer.start();
+            colorFlash = ColorFlash.NONE;
         } else {
             g.setColor(darken(Color.GREEN));
         }
@@ -82,6 +87,8 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.RED) {
             g.setColor(Color.RED);
+            timer.start();
+            colorFlash = ColorFlash.NONE;
         } else {
             g.setColor(darken(Color.RED));
         }
@@ -89,12 +96,16 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.BLUE) {
             g.setColor(Color.BLUE);
+            timer.start();
+            colorFlash = ColorFlash.NONE;
         } else
             g.setColor(darken(Color.BLUE));
         g.fillArc(0, 0, WIDTH, HEIGHT, 0, -90);
 
         if (colorFlash == ColorFlash.YELLOW) {
             g.setColor(Color.YELLOW);
+            timer.start();
+            colorFlash = ColorFlash.NONE;
         } else {
             g.setColor(darken(Color.YELLOW));
         }
@@ -118,13 +129,13 @@ public class SimonSays implements ActionListener, MouseListener{
         int x = e.getX();
         int y = e.getY();
         System.out.println(x + " " + y);
-        if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2) {
+        if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2 + 30) {
             colorFlash = ColorFlash.GREEN;
-        } else if(x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2) {
+        } else if(x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2 + 30) {
             colorFlash = ColorFlash.RED;
-        } else if(x > 0 && x < WIDTH / 2 && y > HEIGHT / 2 && y < HEIGHT) {
+        } else if(x > 0 && x < WIDTH / 2 && y > HEIGHT / 2 + 30 && y < HEIGHT) {
             colorFlash = ColorFlash.YELLOW;
-        } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 && y < HEIGHT) {
+        } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 + 30 && y < HEIGHT) {
             colorFlash = ColorFlash.BLUE;
         }
     }
@@ -143,4 +154,5 @@ public class SimonSays implements ActionListener, MouseListener{
     public void mouseExited(MouseEvent e) {
 
     }
+    
 }

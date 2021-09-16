@@ -49,7 +49,7 @@ public class Sfx {
 		green = loadSound("sounds/btn2.wav");
 		blue = loadSound("sounds/btn3.wav");
 		yellow = loadSound("sounds/btn4.wav");
-		loss = loadSound("sounds/loss.wav");
+		loss = loadSound("sounds/lose.wav");
 		
 		initialized = true;
 	}
@@ -59,12 +59,13 @@ public class Sfx {
 		Clip clip = null;
 		
 		try {
-			clip = AudioSystem.getClip();
+			clip = AudioSystem.getClip(null);
 			
 			AudioInputStream ai;
 			
-			ai = AudioSystem.getAudioInputStream(new File(path));
+			ai = AudioSystem.getAudioInputStream((new File(path)));
 			clip.open(ai);
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("Could not load sound files.");
 			System.out.print("Path to directory: " + (new File(path)).toPath().toAbsolutePath().toString());

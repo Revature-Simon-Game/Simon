@@ -18,6 +18,8 @@ import java.util.concurrent.TimeUnit;
 public class SimonSays implements ActionListener, MouseListener{
 
     public static SimonSays simon;
+    
+    public GamePlay gamePlay = new GamePlay();
 
     public int highScore;
 
@@ -26,8 +28,8 @@ public class SimonSays implements ActionListener, MouseListener{
     public final int HEIGHT = 600;
     public final int WIDTH = 600;
 
-    public JFrame frame = new JFrame();
-    Timer timer = new Timer(100,this);
+    public JFrame frame = new JFrame("Simon Says");
+    Timer timer = new Timer(100, this);
 
     public JLabel label = new JLabel("High Score: " + highScore);
     public JButton start = new JButton("Start");
@@ -36,6 +38,8 @@ public class SimonSays implements ActionListener, MouseListener{
 
     public SimonSays() {
         render = new SimonRender();
+        
+        start.setBounds(30,30,0,0);
         
         frame.setSize(WIDTH + 6, HEIGHT + 29);
         frame.setVisible(true);
@@ -75,8 +79,6 @@ public class SimonSays implements ActionListener, MouseListener{
     public void paint(Graphics2D g) {
         g.setColor(Color.GRAY);
         g.fillRect(0,0,WIDTH,HEIGHT);
-        GamePlay gamePlay = new GamePlay();
-        gamePlay.increment();
 
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
@@ -118,8 +120,13 @@ public class SimonSays implements ActionListener, MouseListener{
         g.fillArc(WIDTH / 4, HEIGHT / 4, WIDTH / 2, HEIGHT / 2, 0, 360);
         g.fillRect((WIDTH / 2) - 15, 0, 30, HEIGHT);
         g.fillRect(0, (HEIGHT / 2) - 15, WIDTH, 30);
+        
+        g.setColor(Color.GRAY);
+        g.drawArc((WIDTH / 4)+20, (HEIGHT / 4)+20, (WIDTH/2)-40, (HEIGHT / 2)-40, 0, 360);
+        g.fillArc((WIDTH / 4)+20, (HEIGHT / 4)+20, (WIDTH/2)-40, (HEIGHT / 2)-40, 180, 180);
 
-
+        g.setFont(new Font("Purisa", Font.BOLD, 45));
+        g.drawString("SIMON", (WIDTH/2)-65,(HEIGHT/2)-40);
     }
 
     @Override
@@ -132,7 +139,36 @@ public class SimonSays implements ActionListener, MouseListener{
         int x = e.getX();
         int y = e.getY();
         System.out.println(x + " " + y);
-        if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2 + 30) {
+        if (x > 200 && x < 400 && y > 230 && y < 420) {
+        	gamePlay.pattern.clear();
+			gamePlay.increment();
+			gamePlay.increment();
+			System.out.println(gamePlay.pattern);
+			timer.setDelay(1000);
+			for (int i : gamePlay.pattern) {
+				if(i == 1) {
+					colorFlash = ColorFlash.GREEN;
+					timer.start();
+				}
+				
+				if(i == 2) {
+					colorFlash = ColorFlash.RED;
+					timer.start();
+				}
+				
+				if(i == 3) {
+					colorFlash = ColorFlash.BLUE;
+					timer.start();
+				}
+				
+				if(i == 4) {
+					colorFlash = ColorFlash.YELLOW;
+					timer.start();
+				}
+			}
+			timer.setDelay(100);
+        }
+        else if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2 + 30) {
             colorFlash = ColorFlash.GREEN;
         } else if(x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2 + 30) {
             colorFlash = ColorFlash.RED;

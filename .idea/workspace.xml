@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="New branch">
-      <change afterPath="$PROJECT_DIR$/src/revature/sound/Sfx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/revature/sound/SoundTypes.java" afterDir="false" />
+    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="Added sounds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/revature/sound/Sfx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/sound/Sfx.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631804255428</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added sounds">
+      <created>1631821313580</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631821313580</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,7 +136,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed brackets, improved contrast, changed int field to enum" />
     <MESSAGE value="New branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="New branch" />
+    <MESSAGE value="Added sounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sounds" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Simon$SimonSays__1_.ic" NAME="SimonSays (1) Coverage Results" MODIFIED="1631801331242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

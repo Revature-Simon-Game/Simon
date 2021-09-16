@@ -1,7 +1,6 @@
 package revature;
 
 import revature.gui.ColorFlash;
-import revature.gui.SimonGui;
 import revature.gui.SimonRender;
 
 import revature.GamePlay;
@@ -23,6 +22,8 @@ public class SimonSays implements ActionListener, MouseListener{
     public GamePlay gamePlay = new GamePlay();
 
     public int highScore;
+    public boolean pattern = false;
+    public int patternCount = 1;
 
     ColorFlash colorFlash = ColorFlash.NONE;
 
@@ -30,7 +31,8 @@ public class SimonSays implements ActionListener, MouseListener{
     public final int WIDTH = 600;
 
     public JFrame frame = new JFrame("Simon Says");
-    Timer timer = new Timer(100, this);
+    Timer timer = new Timer(50, this);
+    int clockTimer;
 
     public JLabel label = new JLabel("High Score: " + highScore);
     public JButton start = new JButton("Start");
@@ -68,9 +70,37 @@ public class SimonSays implements ActionListener, MouseListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    	clockTimer++;
+
+        if (clockTimer % 10 == 0) {
+	    	colorFlash = ColorFlash.NONE;
+	    	if (pattern && patternCount <= gamePlay.pattern.size() - 1) {
+	    		colorFlash = color(gamePlay.pattern.get(patternCount));
+	    		patternCount++;
+	        }
+	    	else {
+    			patternCount = 0;
+    			pattern = false;
+    		}
+        }
+
         render.repaint();
     }
-    
+
+    public ColorFlash color(int num) {
+        switch (num) {
+            case 1:
+                return ColorFlash.GREEN;
+            case 2:
+                return ColorFlash.RED;
+            case 3:
+                return ColorFlash.BLUE;
+            case 4:
+                return ColorFlash.YELLOW;
+        }
+        return ColorFlash.NONE;
+    }
+
     public Color darken(Color color) {
         return color.darker().darker().darker();
     }
@@ -81,10 +111,16 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
-            System.out.println(gamePlay.patternCheck(colorFlash));
-            timer.start();
-            colorFlash = ColorFlash.NONE;
-			System.out.println(gamePlay.pattern);
+            if (pattern == false) {
+	            System.out.println(gamePlay.patternCheck(colorFlash));
+	            colorFlash = ColorFlash.NONE;
+				System.out.println(gamePlay.pattern);
+				if (gamePlay.patternPlace == gamePlay.pattern.size()) {
+					pattern = true;
+					gamePlay.patternPlace = 0;
+					gamePlay.increment();
+				}
+            }
         } else {
             g.setColor(darken(Color.GREEN));
         }
@@ -93,10 +129,16 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.RED) {
             g.setColor(Color.RED);
-            System.out.println(gamePlay.patternCheck(colorFlash));
-            timer.start();
-            colorFlash = ColorFlash.NONE;
-			System.out.println(gamePlay.pattern);
+            if (pattern == false) {
+	            System.out.println(gamePlay.patternCheck(colorFlash));
+	            colorFlash = ColorFlash.NONE;
+				System.out.println(gamePlay.pattern);
+				if (gamePlay.patternPlace == gamePlay.pattern.size()) {
+					pattern = true;
+					gamePlay.patternPlace = 0;
+					gamePlay.increment();
+				}
+            }
         } else {
             g.setColor(darken(Color.RED));
         }
@@ -105,10 +147,16 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.BLUE) {
             g.setColor(Color.BLUE);
-            System.out.println(gamePlay.patternCheck(colorFlash));
-            timer.start();
-            colorFlash = ColorFlash.NONE;
-			System.out.println(gamePlay.pattern);
+            if (pattern == false) {
+	            System.out.println(gamePlay.patternCheck(colorFlash));
+	            colorFlash = ColorFlash.NONE;
+				System.out.println(gamePlay.pattern);
+				if (gamePlay.patternPlace == gamePlay.pattern.size()) {
+					pattern = true;
+					gamePlay.patternPlace = 0;
+					gamePlay.increment();
+				}
+            }
         } else
             g.setColor(darken(Color.BLUE));
         
@@ -116,10 +164,17 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.YELLOW) {
             g.setColor(Color.YELLOW);
-            System.out.println(gamePlay.patternCheck(colorFlash));
-            timer.start();
-            colorFlash = ColorFlash.NONE;
-			System.out.println(gamePlay.pattern);
+            if (pattern == false) {
+	            System.out.println(gamePlay.patternCheck(colorFlash));
+	            colorFlash = ColorFlash.NONE;
+				System.out.println(gamePlay.pattern);
+				if (gamePlay.patternPlace == gamePlay.pattern.size()) {
+					pattern = true;
+					gamePlay.patternPlace = 0;
+					gamePlay.increment();
+					System.out.println("Pattern Time");
+				}
+            }
         } else {
             g.setColor(darken(Color.YELLOW));
         }
@@ -154,43 +209,26 @@ public class SimonSays implements ActionListener, MouseListener{
     	int x = e.getX();
         int y = e.getY();
         System.out.println(x + " " + y);
-        if (x > 200 && x < 400 && y > 230 && y < 420) {
-        	gamePlay.pattern.clear();
-			gamePlay.increment();
-			gamePlay.increment();
-			timer.setDelay(1000);
-			for (int i : gamePlay.pattern) {
-				if(i == 1) {
-					colorFlash = ColorFlash.GREEN;
-					timer.start();
-				}
-				
-				if(i == 2) {
-					colorFlash = ColorFlash.RED;
-					timer.start();
-				}
-				
-				if(i == 3) {
-					colorFlash = ColorFlash.BLUE;
-					timer.start();
-				}
-				
-				if(i == 4) {
-					colorFlash = ColorFlash.YELLOW;
-					timer.start();
-				}
-			}
-			timer.setDelay(100);
-        }
-        else if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2 + 30) {
-            colorFlash = ColorFlash.GREEN;
-        } else if(x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2 + 30) {
-            colorFlash = ColorFlash.RED;
-        } else if(x > 0 && x < WIDTH / 2 && y > HEIGHT / 2 + 30 && y < HEIGHT) {
-            colorFlash = ColorFlash.YELLOW;
-        } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 + 30 && y < HEIGHT) {
-            colorFlash = ColorFlash.BLUE;
-        }
+	        if (x > 200 && x < 400 && y > 230 && y < 420) {
+	        	gamePlay.pattern.clear();
+				gamePlay.increment();
+				gamePlay.increment();
+				pattern = true;
+				System.out.println(gamePlay.pattern);
+	        }
+	        else if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2 + 30) {
+	                colorFlash = ColorFlash.GREEN;
+	                clockTimer = 1;
+            } else if (x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2 + 30) {
+                colorFlash = ColorFlash.RED;
+                clockTimer = 1;
+            } else if (x > 0 && x < WIDTH / 2 && y > HEIGHT / 2 + 30 && y < HEIGHT) {
+                colorFlash = ColorFlash.YELLOW;
+                clockTimer = 1;
+            } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 + 30 && y < HEIGHT) {
+                colorFlash = ColorFlash.BLUE;
+                clockTimer = 1;
+            }
     }
 
     @Override

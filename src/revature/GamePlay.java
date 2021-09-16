@@ -23,7 +23,7 @@ public class GamePlay {
 		}
         
 		public void increment() {
-	        pattern.add(rand.nextInt((4-1) + 1) + 1);
+			pattern.add(rand.nextInt((4-1) + 1) + 1);
 		}
 		
 		public boolean patternCheck(ColorFlash colorFlash) {
@@ -50,13 +50,7 @@ public class GamePlay {
 	        }
 	        
 			if(patternInput == pattern.get(patternPlace)) {
-				if(patternPlace == pattern.size()-1) {
-					pattern.add(rand.nextInt((4-1) + 1) + 1);
-					patternPlace = 0;
-				}
-				else {
-					patternPlace++;
-				}
+				patternPlace++;
 				return true;
 			}
 			else {

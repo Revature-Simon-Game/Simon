@@ -46,6 +46,7 @@ public class Sfx {
 		
 		if (!initialized) {
 			init();
+			initialized = true;
 		}
 		
 		switch (sound) {

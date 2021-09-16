@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/revature/gui/ColorFlash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="Fixed brackets, improved contrast, changed int field to enum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/revature/gui/SimonGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/gui/SimonGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="gui2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1yBJugDbGK0K0kPWYQyMMbaeqDA" />
@@ -85,6 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1631719271376</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed brackets, improved contrast, changed int field to enum">
+      <created>1631740256354</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631740256354</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,5 +106,14 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed brackets, improved contrast, changed int field to enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed brackets, improved contrast, changed int field to enum" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Simon$SimonSays__1_.ic" NAME="SimonSays (1) Coverage Results" MODIFIED="1631801331242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>revature.*</FILTER>
+    </SUITE>
   </component>
 </project>

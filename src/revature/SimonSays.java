@@ -25,7 +25,7 @@ public class SimonSays implements ActionListener, MouseListener{
     public final int HEIGHT = 600;
     public final int WIDTH = 600;
 
-    public JFrame frame = new JFrame();
+    public JFrame frame = new JFrame("Simon Says");
     Timer timer = new Timer(100,this);
 
     public JLabel label = new JLabel("High Score: " + highScore);
@@ -35,6 +35,8 @@ public class SimonSays implements ActionListener, MouseListener{
 
     public SimonSays() {
         render = new SimonRender();
+        
+        start.setBounds(30,30,0,0);
         
         frame.setSize(WIDTH + 6, HEIGHT + 29);
         frame.setVisible(true);

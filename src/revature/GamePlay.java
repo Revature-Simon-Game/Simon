@@ -27,8 +27,12 @@ public class GamePlay {
 		}
 		
 		public boolean patternCheck(ColorFlash colorFlash) {
+			System.out.println(pattern);
+			System.out.println(patternPlace);
 			int patternInput = 0;
-			
+			if (pattern.isEmpty()) {
+				return false;
+			}
 			if (colorFlash == ColorFlash.GREEN) {
 				patternInput = 1;
 			}
@@ -56,6 +60,7 @@ public class GamePlay {
 				return true;
 			}
 			else {
+				patternPlace = 0;
 				pattern.clear();
 				pattern.add(rand.nextInt((4-1) + 1) + 1);
 				return false;

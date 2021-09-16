@@ -81,8 +81,10 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
+            System.out.println(gamePlay.patternCheck(colorFlash));
             timer.start();
             colorFlash = ColorFlash.NONE;
+			System.out.println(gamePlay.pattern);
         } else {
             g.setColor(darken(Color.GREEN));
         }
@@ -91,28 +93,37 @@ public class SimonSays implements ActionListener, MouseListener{
 
         if (colorFlash == ColorFlash.RED) {
             g.setColor(Color.RED);
+            System.out.println(gamePlay.patternCheck(colorFlash));
             timer.start();
             colorFlash = ColorFlash.NONE;
+			System.out.println(gamePlay.pattern);
         } else {
             g.setColor(darken(Color.RED));
         }
+        
         g.fillArc(0, 0, WIDTH, HEIGHT, 90, -90);
 
         if (colorFlash == ColorFlash.BLUE) {
             g.setColor(Color.BLUE);
+            System.out.println(gamePlay.patternCheck(colorFlash));
             timer.start();
             colorFlash = ColorFlash.NONE;
+			System.out.println(gamePlay.pattern);
         } else
             g.setColor(darken(Color.BLUE));
+        
         g.fillArc(0, 0, WIDTH, HEIGHT, 0, -90);
 
         if (colorFlash == ColorFlash.YELLOW) {
             g.setColor(Color.YELLOW);
+            System.out.println(gamePlay.patternCheck(colorFlash));
             timer.start();
             colorFlash = ColorFlash.NONE;
+			System.out.println(gamePlay.pattern);
         } else {
             g.setColor(darken(Color.YELLOW));
         }
+        
         g.fillArc(0, 0, WIDTH, HEIGHT, 180, 90);
 
         g.setColor(Color.BLACK);
@@ -135,14 +146,18 @@ public class SimonSays implements ActionListener, MouseListener{
 
     @Override
     public void mousePressed(MouseEvent e) {
-        int x = e.getX();
+        
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    	int x = e.getX();
         int y = e.getY();
         System.out.println(x + " " + y);
         if (x > 200 && x < 400 && y > 230 && y < 420) {
         	gamePlay.pattern.clear();
 			gamePlay.increment();
 			gamePlay.increment();
-			System.out.println(gamePlay.pattern);
 			timer.setDelay(1000);
 			for (int i : gamePlay.pattern) {
 				if(i == 1) {
@@ -176,11 +191,6 @@ public class SimonSays implements ActionListener, MouseListener{
         } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 + 30 && y < HEIGHT) {
             colorFlash = ColorFlash.BLUE;
         }
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
     }
 
     @Override

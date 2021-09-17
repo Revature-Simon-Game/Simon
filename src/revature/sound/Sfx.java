@@ -22,61 +22,74 @@ public class Sfx {
 		
 		if (!initialized) {
 			init();
-			initialized = true;
 		}
 		
 		switch (sound) {
 			case RED: {
+				resetClip(red);
 				red.start();
 				break;
 			}
+			case GREEN: {
+				resetClip(green);
+				green.start();
+				break;
+			}
 			case BLUE: {
+				resetClip(blue);
 				blue.start();
 				break;
 			}
 			case YELLOW: {
+				resetClip(yellow);
 				yellow.start();
 				break;
 			}
 			case LOSS: {
+				resetClip(loss);
 				loss.start();
 				break;
 			}
 		}
-		
-		return;
 	}
 	
 	private static void init() {
+		red = loadSound("sounds/btn1.wav");
+		green = loadSound("sounds/btn2.wav");
+		blue = loadSound("sounds/btn3.wav");
+		yellow = loadSound("sounds/btn4.wav");
+		loss = loadSound("sounds/lose.wav");
+		
+		initialized = true;
+	}
+	
+	private static Clip loadSound(String path) {
+		
+		Clip clip = null;
+		
 		try {
-			red = AudioSystem.getClip();
-			green = AudioSystem.getClip();
-			blue = AudioSystem.getClip();
-			yellow = AudioSystem.getClip();
-			loss = AudioSystem.getClip();
+			clip = AudioSystem.getClip(null);
 			
 			AudioInputStream ai;
-			File f = new File("sounds/btn1.wav");
-			System.out.println(f.exists());
 			
-			ai = AudioSystem.getAudioInputStream(new File("sounds/btn1.wav"));
-			red.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("sounds/btn2.wav"));
-			green.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("sounds/btn3.wav"));
-			blue.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("sounds/btn4.wav"));
-			yellow.open(ai);
-			ai = AudioSystem.getAudioInputStream(new File("sounds/loss.wav"));
-			loss.open(ai);
+			ai = AudioSystem.getAudioInputStream((new File(path)));
+			clip.open(ai);
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("Could not load sound files.");
-			System.out.print("Path to directory: " + (new File("sounds/btn1.wav")).toPath().toAbsolutePath().toString());
+			System.out.print("Path to directory: " + (new File(path)).toPath().toAbsolutePath().toString());
 			
 			System.exit(1);
 		} catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
 			System.out.println();
 			e.printStackTrace();
 		}
+	
+		return clip;
+	}
+	
+	private static void resetClip(Clip clip) {
+		clip.stop();
+		clip.setMicrosecondPosition(0);
 	}
 }

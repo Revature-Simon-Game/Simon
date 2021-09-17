@@ -104,7 +104,7 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
             if (!pattern) {
-            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
+            	if(!gamePlay.pattern.isEmpty() && !gamePlay.patternCheck(colorFlash)) {
 	            	sfx(ColorFlash.LOSS);
 	            }
             	else
@@ -126,7 +126,7 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.RED) {
             g.setColor(Color.RED);
             if (!pattern) {
-            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
+            	if(!gamePlay.pattern.isEmpty() && !gamePlay.patternCheck(colorFlash)) {
 	            	sfx(ColorFlash.LOSS);
 	            }
             	else
@@ -148,7 +148,7 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.BLUE) {
             g.setColor(Color.BLUE);
             if (!pattern) {
-            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
+            	if(!gamePlay.pattern.isEmpty() && !gamePlay.patternCheck(colorFlash)) {
 	            	sfx(ColorFlash.LOSS);
 	            }
             	else
@@ -169,7 +169,7 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.YELLOW) {
             g.setColor(Color.YELLOW);
             if (!pattern) {
-            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
+            	if(!gamePlay.pattern.isEmpty() && !gamePlay.patternCheck(colorFlash)) {
 	            	sfx(ColorFlash.LOSS);
 	            }
             	else

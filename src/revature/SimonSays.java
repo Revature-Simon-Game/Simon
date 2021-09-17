@@ -143,6 +143,7 @@ public class SimonSays implements ActionListener, MouseListener{
         g.fillArc(0,0,WIDTH, HEIGHT, 90, 90);
 
         if (colorFlash == ColorFlash.RED) {
+            Sfx.play(SoundTypes.RED);
             g.setColor(Color.RED);
             if (pattern == false) {
             	sfx(colorFlash);

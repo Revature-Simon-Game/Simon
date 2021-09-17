@@ -26,18 +26,27 @@ public class Sfx {
 		
 		switch (sound) {
 			case RED: {
+				resetClip(red);
 				red.start();
 				break;
 			}
+			case GREEN: {
+				resetClip(green);
+				green.start();
+				break;
+			}
 			case BLUE: {
+				resetClip(blue);
 				blue.start();
 				break;
 			}
 			case YELLOW: {
+				resetClip(yellow);
 				yellow.start();
 				break;
 			}
 			case LOSS: {
+				resetClip(loss);
 				loss.start();
 				break;
 			}
@@ -77,5 +86,10 @@ public class Sfx {
 		}
 	
 		return clip;
+	}
+	
+	private static void resetClip(Clip clip) {
+		clip.stop();
+		clip.setMicrosecondPosition(0);
 	}
 }

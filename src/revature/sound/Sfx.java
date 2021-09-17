@@ -90,6 +90,7 @@ public class Sfx {
 	
 	private static void resetClip(Clip clip) {
 		clip.stop();
+		clip.flush();
 		clip.setMicrosecondPosition(0);
 	}
 }

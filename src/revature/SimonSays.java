@@ -55,9 +55,7 @@ public class SimonSays implements ActionListener, MouseListener{
     public static void main(String[] args) {
 
         simon = new SimonSays();
-
-        //game.run();
-
+        
     }
 
     @Override

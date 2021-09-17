@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="Reorganized init method to be more DRY">
+    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="No longer crashes, removed improper instantiation, superfluous semicolons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/revature/sound/Sfx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/sound/Sfx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="gameplay" />
+        <entry key="$PROJECT_DIR$" value="sound-merged" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -193,18 +193,10 @@
     <MESSAGE value="Fixed FileNotFound error" />
     <MESSAGE value="Fixed FileNotFound error again (mistake on a few lines)" />
     <MESSAGE value="Reorganized init method to be more DRY" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganized init method to be more DRY" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/revature/SimonSays.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="No longer crashes" />
+    <MESSAGE value="No longer crashes, removed improper instantiation" />
+    <MESSAGE value="No longer crashes, removed improper instantiation, superfluous semicolons" />
+    <option name="LAST_COMMIT_MESSAGE" value="No longer crashes, removed improper instantiation, superfluous semicolons" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Simon$SimonSays__1_.ic" NAME="SimonSays (1) Coverage Results" MODIFIED="1631801331242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

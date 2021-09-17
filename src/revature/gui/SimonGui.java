@@ -68,6 +68,7 @@ public class SimonGui implements ActionListener {
     public void paint(Graphics2D g) {
         g.setColor(Color.GRAY);
         g.fillRect(0,0, WIDTH, HEIGHT);
+        
 
         g.setColor(Color.GREEN);
         g.fillRect(0,0, WIDTH / 2, HEIGHT / 2);

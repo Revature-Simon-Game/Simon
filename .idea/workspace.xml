@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="No longer crashes, removed improper instantiation, superfluous semicolons">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="Removed some commented code">
       <change beforePath="$PROJECT_DIR$/src/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sound-merged" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1yBJugDbGK0K0kPWYQyMMbaeqDA" />
   <component name="ProjectLevelVcsManager">
@@ -156,7 +156,42 @@
       <option name="project" value="LOCAL" />
       <updated>1631828323399</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="No longer crashes, fixed some style warnings, fixed some actual warnings">
+      <created>1631890347740</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1631890347740</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixed issue where red had glitchy playback">
+      <created>1631891856574</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1631891856574</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Deleted unused class">
+      <created>1631894214402</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1631894214402</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Removed unused imports">
+      <created>1631894280380</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1631894280380</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Removed some commented code">
+      <created>1631894420643</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1631894420643</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,7 +231,12 @@
     <MESSAGE value="No longer crashes" />
     <MESSAGE value="No longer crashes, removed improper instantiation" />
     <MESSAGE value="No longer crashes, removed improper instantiation, superfluous semicolons" />
-    <option name="LAST_COMMIT_MESSAGE" value="No longer crashes, removed improper instantiation, superfluous semicolons" />
+    <MESSAGE value="No longer crashes, fixed some style warnings, fixed some actual warnings" />
+    <MESSAGE value="Fixed issue where red had glitchy playback" />
+    <MESSAGE value="Deleted unused class" />
+    <MESSAGE value="Removed unused imports" />
+    <MESSAGE value="Removed some commented code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed some commented code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Simon$SimonSays__1_.ic" NAME="SimonSays (1) Coverage Results" MODIFIED="1631801331242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

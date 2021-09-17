@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/net/revature/SimonSays.java" afterDir="false" />
+    <list default="true" id="13309a35-c020-411f-b5ba-997871b1319b" name="Default Changelist" comment="No longer crashes, removed improper instantiation, superfluous semicolons">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/revature/SimonSays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/revature/SimonSays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,22 +14,49 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sound-merged" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1yBJugDbGK0K0kPWYQyMMbaeqDA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.31213874" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SimonSays (1)">
+    <configuration name="SimonSays (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="revature.SimonSays" />
+      <module name="Simon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="revature.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimonSays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.revature.SimonSays" />
       <module name="Simon" />
@@ -44,6 +72,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SimonSays (1)" />
         <item itemvalue="Application.SimonSays" />
       </list>
     </recent_temporary>
@@ -57,6 +86,77 @@
       <option name="presentableId" value="Default" />
       <updated>1631719271376</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed brackets, improved contrast, changed int field to enum">
+      <created>1631740256354</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631740256354</updated>
+    </task>
+    <task id="LOCAL-00002" summary="New branch">
+      <created>1631804255428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1631804255428</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added sounds">
+      <created>1631821313580</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631821313580</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First draft. Code is untested.">
+      <created>1631823481500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631823481500</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed bug in initialization">
+      <created>1631823672093</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631823672093</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed bug in initialization">
+      <created>1631823686577</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631823686577</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reorganized Sfx.java a little">
+      <created>1631824192589</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631824192589</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed FileNotFound error">
+      <created>1631824899508</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631824899508</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed FileNotFound error again (mistake on a few lines)">
+      <created>1631824983749</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631824983749</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Reorganized init method to be more DRY">
+      <created>1631828323399</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1631828323399</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -64,10 +164,43 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="gameplay" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed brackets, improved contrast, changed int field to enum" />
+    <MESSAGE value="New branch" />
+    <MESSAGE value="Added sounds" />
+    <MESSAGE value="First draft. Code is untested." />
+    <MESSAGE value="Fixed bug in initialization" />
+    <MESSAGE value="Reorganized Sfx.java a little" />
+    <MESSAGE value="Fixed FileNotFound error" />
+    <MESSAGE value="Fixed FileNotFound error again (mistake on a few lines)" />
+    <MESSAGE value="Reorganized init method to be more DRY" />
+    <MESSAGE value="No longer crashes" />
+    <MESSAGE value="No longer crashes, removed improper instantiation" />
+    <MESSAGE value="No longer crashes, removed improper instantiation, superfluous semicolons" />
+    <option name="LAST_COMMIT_MESSAGE" value="No longer crashes, removed improper instantiation, superfluous semicolons" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Simon$SimonSays__1_.ic" NAME="SimonSays (1) Coverage Results" MODIFIED="1631801331242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>revature.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -104,10 +104,11 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.GREEN) {
             g.setColor(Color.GREEN);
             if (!pattern) {
-            	sfx(colorFlash);
-	            if(!gamePlay.patternCheck(colorFlash)) {
+            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
 	            	sfx(ColorFlash.LOSS);
 	            }
+            	else
+            		sfx(colorFlash);
 	            colorFlash = ColorFlash.NONE;
 				System.out.println(gamePlay.pattern);
 				if (gamePlay.patternPlace == gamePlay.pattern.size() && gamePlay.patternPlace > 0) {
@@ -125,10 +126,11 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.RED) {
             g.setColor(Color.RED);
             if (!pattern) {
-            	sfx(colorFlash);
-            	if(!gamePlay.patternCheck(colorFlash)) {
+            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
 	            	sfx(ColorFlash.LOSS);
 	            }
+            	else
+            		sfx(colorFlash);
 	            colorFlash = ColorFlash.NONE;
 				System.out.println(gamePlay.pattern);
 				if (gamePlay.patternPlace == gamePlay.pattern.size() && gamePlay.patternPlace > 0) {
@@ -146,10 +148,11 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.BLUE) {
             g.setColor(Color.BLUE);
             if (!pattern) {
-	            sfx(ColorFlash.BLUE);
-	            if(!gamePlay.patternCheck(colorFlash)) {
+            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
 	            	sfx(ColorFlash.LOSS);
 	            }
+            	else
+            		sfx(colorFlash);
 	            colorFlash = ColorFlash.NONE;
 				System.out.println(gamePlay.pattern);
 				if (gamePlay.patternPlace == gamePlay.pattern.size() && gamePlay.patternPlace > 0) {
@@ -166,10 +169,11 @@ public class SimonSays implements ActionListener, MouseListener{
         if (colorFlash == ColorFlash.YELLOW) {
             g.setColor(Color.YELLOW);
             if (!pattern) {
-            	sfx(colorFlash);
-            	if(!gamePlay.patternCheck(colorFlash)) {
+            	if(!gamePlay.patternCheck(colorFlash) && !gamePlay.pattern.isEmpty()) {
 	            	sfx(ColorFlash.LOSS);
 	            }
+            	else
+            		sfx(colorFlash);
 	            colorFlash = ColorFlash.NONE;
 				System.out.println(gamePlay.pattern);
 				if (gamePlay.patternPlace == gamePlay.pattern.size() && gamePlay.patternPlace > 0) {
@@ -213,22 +217,22 @@ public class SimonSays implements ActionListener, MouseListener{
     	int x = e.getX();
         int y = e.getY();
         System.out.println(x + " " + y);
-	        if (x > 200 && x < 400 && y > 230 && y < 420) {
+	        if (x > 200 && x < 400 && y > 230 && y < 420 && !pattern) {
 	        	gamePlay.pattern.clear();
 				gamePlay.increment();
 				pattern = true;
 				System.out.println(gamePlay.pattern);
 	        }
-	        else if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2 + 30) {
+	        else if (x > 0 && x < WIDTH / 2 && y > 0 && y < HEIGHT / 2 + 30 && !pattern) {
 	                colorFlash = ColorFlash.GREEN;
 	                clockTimer = 1;
-            } else if (x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2 + 30) {
+            } else if (x > WIDTH / 2 && x < WIDTH && y > 0 && y < HEIGHT / 2 + 30 && !pattern) {
                 colorFlash = ColorFlash.RED;
                 clockTimer = 1;
-            } else if (x > 0 && x < WIDTH / 2 && y > HEIGHT / 2 + 30 && y < HEIGHT) {
+            } else if (x > 0 && x < WIDTH / 2 && y > HEIGHT / 2 + 30 && y < HEIGHT && !pattern) {
                 colorFlash = ColorFlash.YELLOW;
                 clockTimer = 1;
-            } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 + 30 && y < HEIGHT) {
+            } else if (x > WIDTH / 2 && x < WIDTH && y > HEIGHT / 2 + 30 && y < HEIGHT && !pattern) {
                 colorFlash = ColorFlash.BLUE;
                 clockTimer = 1;
             }

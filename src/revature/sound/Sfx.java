@@ -49,11 +49,11 @@ public class Sfx {
 	
 	private static void init() {
 		try {
-			red = AudioSystem.getClip();
-			green = AudioSystem.getClip();
-			blue = AudioSystem.getClip();
-			yellow = AudioSystem.getClip();
-			loss = AudioSystem.getClip();
+			red = AudioSystem.getClip(null);
+			green = AudioSystem.getClip(null);
+			blue = AudioSystem.getClip(null);
+			yellow = AudioSystem.getClip(null);
+			loss = AudioSystem.getClip(null);
 			
 			AudioInputStream ai;
 			File f = new File("sounds/btn1.wav");
